@@ -1,0 +1,23 @@
+<form #survey="ngForm">
+    <div class="form-group py-2">
+        <label for="email">Email:</label>
+        <input #emailRef type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input #passwordRef type="password" class="form-control" id="password" name="password" [(ngModel)]="password">
+    </div>
+    <div class="form-group py-2">
+        <label for="gender">Gender:</label>
+        <select #genderRef name="gender" class="form-control" id="gender" [(ngModel)]="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+    <div class="form-group py-2">
+        <label for="age">Age:</label>
+        <input #ageRef type="number" class="form-control" id="age" name="age" [(ngModel)]="age">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{survey.value | json }}
